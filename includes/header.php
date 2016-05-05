@@ -19,16 +19,22 @@
 <a class="skip-link sr-only" href="#content">Skip to content</a>
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
-    <div class="navbar-header">
+    <div class="row navbar-header" style="width:100%">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+<div class="col-md-1">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/profile-tim-200x200.jpg" style=" height: 80px; float: left; ">
+    </div>
+      
+  <div class="col-md-6">
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
       <div style="clear:both"><span class="navbar-tagline"><?php bloginfo('description'); ?></span></div>
     </div>
+
     <div class="collapse navbar-collapse" id="navbar">
       <div class="toggles">
         <div id="menu-toggle" class="toggle active" data-toggle="dropdown" data-target="menu-toggle-nav" title="Menu" aria-label="Menu">
