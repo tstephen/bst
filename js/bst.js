@@ -13,6 +13,9 @@
 		$('input[type=submit]').addClass('btn btn-primary');
 		
 		// You can put your own code in here
+		$('[data-toggle="dropdown"]').click(function(ev) { 
+			$('#'+$(ev.target).data('target')).slideToggle();
+		});
 
 	});
 

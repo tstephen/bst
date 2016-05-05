@@ -16,6 +16,7 @@
 </div>
 <![endif]-->
 
+<a class="skip-link sr-only" href="#content">Skip to content</a>
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
@@ -26,8 +27,22 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
+      <div style="clear:both"><span class="navbar-tagline"><?php bloginfo('description'); ?></span></div>
     </div>
     <div class="collapse navbar-collapse" id="navbar">
+      <div class="toggles">
+        <div id="menu-toggle" class="toggle active" data-toggle="dropdown" data-target="menu-toggle-nav" title="Menu" aria-label="Menu">
+          <span class="glyphicon glyphicon-menu-hamburger" data-target="menu-toggle-nav" aria-hidden="true"></span>
+        </div>
+	<div id="search-toggle" class="toggle" data-toggle="dropdown" data-target="search-toggle-nav" title="Search" aria-label="Search">
+          <span class="glyphicon glyphicon-search" data-target="search-toggle-nav" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+
+  <div id="menu-toggle-nav">
+  <div class="container" style="clear:both;">
       <?php
             wp_nav_menu( array(
                 'theme_location'    => 'navbar-left',
@@ -37,18 +52,21 @@
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-        <?php get_template_part('includes/navbar-search'); ?>
-        <?php
-            wp_nav_menu( array(
-                'theme_location'    => 'navbar-right',
-                'depth'             => 2,
-                'menu_class'        => 'nav navbar-nav navbar-right',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>
-    </div><!-- /.navbar-collapse -->
+  </div>
   </div><!-- /.container -->
+
+  <div id="search-toggle-nav" class="clearfix">
+  <div class="container">
+    <form class="navbar-form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+      <div class="col-md-8 input-group-lg">
+        <input class="form-control" type="text" value="<?php echo get_search_query(); ?>" placeholder="Search..." name="s" id="s">
+      </div>
+      <button type="submit" id="searchsubmit" value="<?php esc_attr_x('Search', 'bst') ?>" class="col-md-4 btn btn-lg"><i class="glyphicon glyphicon-search"></i> Search</button>
+    </form>
+  </div>
+  </div><!-- /.container -->
+
+</div>
 </nav>
   
 <!--

@@ -1,4 +1,21 @@
 /*
+ * Site-wide settings
+ */
+a {
+  color: #656e7f;
+}
+a:focus, a:hover {
+  color: #1e252d;
+}
+body {
+  background-color: #f0f1f3;
+  color: #656e7f;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+}
+/*
 Max content widths
 */
 .size-auto, 
@@ -6,25 +23,132 @@ Max content widths
 .size-large,
 .size-medium,
 .size-thumbnail {
-	max-width: 100%;
-	height: auto
+  max-width: 100%;
+  height: auto;
 }
 
 /*
-Header logo
-If you require a Site title and a logo, an example of how to do this is provided below (use your own logo):
-
-#site-title a {
-  display: inline-block;
-	padding-left 60px;
-  background: url(../img/logo.png) 0 0 no-repeat;
+ * Header
+ */
+.navbar-static-top {
+  background: #242d36;
+  margin: 0;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  z-index: 100;
 }
-*/
-
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav>li>a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+  margin-left: 0;
+  font-size: 1.8em;
+}
+.navbar .navbar-tagline {
+  margin-left: 15px;
+  font-size: 0.8em;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav>li>a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background-color: #f23628;
+  color: rgba(255, 255, 255, 1);
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    float: none;
+    margin: 0 auto;
+    width: 20%;
+  }
+}
+.navbar-static-top .container {
+  border-bottom: 5px solid #1e252d;
+}
+#menu-toggle {
+  background-color: #da72ae;
+}
+#search-toggle {
+  background-color: #9ebfb9;
+}
+.toggle {
+  border-radius: 50%;
+  float:right;
+  height: 60px;
+  margin: 10px 5px;
+  width: 60px;
+} 
+.toggle span {
+  color: #f0f1f3;
+  font-size: 1.7em;
+  left: .5em;
+  position: relative;
+  top: 0.5em;
+}
+.toggle span:hover {
+  color: #fff;
+}
+#menu-toggle-nav {
+  background-color: #da72ae;
+  border-bottom: 5px solid #bc4871;
+  height: 3em;
+}
+#search-toggle-nav {
+  background-color: #9ebfb9;
+  border-bottom: 5px solid #77b8b0;
+  height: 3.5em;
+}
+#menu-toggle-nav,
+#search-toggle-nav {
+  border-radius: 0px;
+  color: #f0f1f3;
+  display:none;
+  margin-bottom:0px;
+  text-transform: uppercase;
+}
+#menu-toggle-nav:hover,
+#search-toggle-nav:hover {
+  color: #fff;
+}
+#menu-toggle-nav .container,
+#search-toggle-nav .container {
+  border-bottom-width: 0px;
+}
+#search-toggle-nav .col-md-8 {
+  padding-left: 0px;
+}
+.navbar-form .form-control {
+  width: 100%;
+}
+.navbar-form .form-control,
+.navbar-form .btn {
+  border:none;
+  border-radius: 0px;
+}
+.navbar-form .btn {
+  background-color: #242d36;
+  border: 2px solid #1e252d;
+  color: #f0f1f3;
+  text-transform: uppercase;
+}
+.navbar-form .btn:hover {
+  color: #fff;
+}
 /*
 Main content
 */
-
+#content article { 
+    background-color: white;
+    border-top: 8px solid #da72ae;
+    margin: 0 0 81px;
+    padding: 27px 27px 22px;
+    position: relative;
+}
 #content article {
   margin-bottom: 40px
 }
