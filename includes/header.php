@@ -30,7 +30,7 @@
       <img src="<?php echo get_template_directory_uri(); ?>/images/profile-tim-200x200.jpg" style=" height: 80px; float: left; ">
     </div>
       
-  <div class="col-md-6">
+  <div class="col-md-8">
       <a class="navbar-brand" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a>
       <div style="clear:both"><span class="navbar-tagline"><?php bloginfo('description'); ?></span></div>
     </div>
