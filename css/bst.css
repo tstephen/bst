@@ -15,6 +15,15 @@ body {
   font-weight: 300;
   line-height: 27px;
 }
+
+.page-id-486 .row {
+  margin-right: -60px;
+  margin-left: -60px;
+}
+.page-id-486 #content article {
+  padding-left: 50px;
+}
+
 /*
 Max content widths
 */
