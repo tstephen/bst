@@ -147,3 +147,11 @@ Site footer
 .site-footer p {
   text-align: center
 }
+
+/* 
+ * Overrides
+ */
+.navbar {
+  margin-bottom: 0px;
+}
+
