@@ -3,11 +3,24 @@
 function bst_widgets_init() {
 
   /*
-  Sidebar (one widget area)
+  Sidebar 1 (one widget area)
    */
   register_sidebar( array(
-    'name'            => __( 'Sidebar', 'bst' ),
-    'id'              => 'sidebar-widget-area',
+    'name'            => __( 'Sidebar 1', 'bst' ),
+    'id'              => 'sidebar1-widget-area',
+    'description'     => __( 'The sidebar widget area', 'bst' ),
+    'before_widget'   => '<section class="%1$s %2$s">',
+    'after_widget'    => '</section>',
+    'before_title'    => '<h4>',
+    'after_title'     => '</h4>',
+  ) );
+
+  /*
+  Sidebar 2 (one widget area)
+   */
+  register_sidebar( array(
+    'name'            => __( 'Sidebar 2', 'bst' ),
+    'id'              => 'sidebar2-widget-area',
     'description'     => __( 'The sidebar widget area', 'bst' ),
     'before_widget'   => '<section class="%1$s %2$s">',
     'after_widget'    => '</section>',

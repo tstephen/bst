@@ -14,22 +14,28 @@ Alternatively, notice that index.php, category.php and single.php have a post_cl
 <?php if(have_posts()): while(have_posts()): the_post();?>
     <article role="article" id="post_<?php the_ID()?>">
         <header>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h2>
-            <h4>
+            <h1><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h1>
+            <h5>
               <em>
-                <span class="text-muted author"><?php _e('By', 'bst'); echo " "; the_author() ?>,</span>
+                <span class="text-muted author">
+                  <img class="img-rounded" src="<?php echo 'https://www.gravatar.com/avatar/'.md5( strtolower( get_the_author_meta('email') ) ).'?d='.urlencode( $default ).'&s=48'; ?>">
+                  <?php the_author() ?>,</span>
                 <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('jS F Y') ?></time>
               </em>
-            </h4>
+            </h5>
         </header>
         <section>
-            <?php the_post_thumbnail(); ?>
+            <?php
+              the_post_thumbnail( 'full', array( 'class' => 'img-responsive'));
+            ?>
             <?php the_content( __( '&hellip; ' . __('Continue reading', 'bst' ) . ' <i class="glyphicon glyphicon-arrow-right"></i>', 'bst' ) ); ?>
         </section>
         <footer>
             <p class="text-muted" style="margin-bottom: 20px;">
                 <i class="glyphicon glyphicon-folder-open"></i>&nbsp; <?php _e('Category', 'bst'); ?>: <?php the_category(', ') ?><br/>
+              <?php if (have_comments() && get_comments_number( $post->ID )>0) { ?>
                 <i class="glyphicon glyphicon-comment"></i>&nbsp; <?php _e('Comments', 'bst'); ?>: <?php comments_popup_link(__('None', 'bst'), '1', '%'); ?>
+              <?php } ?>
             </p>
         </footer>
     </article>

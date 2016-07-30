@@ -16,9 +16,13 @@
 </div>
 <![endif]-->
 
+<div id="pre-navbar">
+  <h1>Corsham Baptist Church</h1>
+</div>
+
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
-    <div class="navbar-header">
+    <div class="navbar-header visible-xs">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -37,16 +41,6 @@
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
-        <?php get_template_part('includes/navbar-search'); ?>
-        <?php
-            wp_nav_menu( array(
-                'theme_location'    => 'navbar-right',
-                'depth'             => 2,
-                'menu_class'        => 'nav navbar-nav navbar-right',
-                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-                'walker'            => new wp_bootstrap_navwalker())
-            );
-        ?>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container -->
 </nav>
@@ -57,6 +51,7 @@ Site Title
 If you are displaying your site title in the "brand" link in the Bootstrap navbar, 
 then you probably don't require a site title. Alternatively you can use the example below. 
 See also the accompanying CSS example in css/bst.css .
+
 
 <div class="container">
   <div class="row">
