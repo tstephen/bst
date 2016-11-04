@@ -17,6 +17,11 @@
     </div>
     
   </div><!-- /.row -->
+</div><!-- /.container -->
+
+
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sub-footer-widget-area') ) : endif; ?>
+<div class="container">
   <div class="row">
     <div class="col-sm-6 col-xs-12" id="left-col" role="navigation">
       <?php get_template_part('includes/sidebar1'); ?>
@@ -25,6 +30,5 @@
       <?php get_template_part('includes/sidebar2'); ?>
     </div>
   </div><!-- /.row -->
-</div><!-- /.container -->
-
+</div>
 <?php get_template_part('includes/footer'); ?>

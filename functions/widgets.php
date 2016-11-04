@@ -3,7 +3,7 @@
 function bst_widgets_init() {
 
   /*
-  Sidebar 1 (one widget area)
+   * Sidebar 1 (one widget area)
    */
   register_sidebar( array(
     'name'            => __( 'Sidebar 1', 'bst' ),
@@ -16,7 +16,7 @@ function bst_widgets_init() {
   ) );
 
   /*
-  Sidebar 2 (one widget area)
+   * Sidebar 2 (one widget area)
    */
   register_sidebar( array(
     'name'            => __( 'Sidebar 2', 'bst' ),
@@ -29,7 +29,20 @@ function bst_widgets_init() {
   ) );
 
   /*
-  Footer (three widget areas)
+   * Sub-Footer (four widget areas)
+   */
+  register_sidebar( array(
+    'name'            => __( 'Sub-Footer', 'bst' ),
+    'id'              => 'sub-footer-widget-area',
+    'description'     => __( 'The sub-footer widget area', 'bst' ),
+    'before_widget'   => '<div class="%1$s %2$s col-sm-3">',
+    'after_widget'    => '</div>',
+    'before_title'    => '<h4>',
+    'after_title'     => '</h4>',
+  ) );
+
+  /*
+   * Footer (three widget areas)
    */
   register_sidebar( array(
     'name'            => __( 'Footer', 'bst' ),
