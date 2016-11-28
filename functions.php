@@ -16,3 +16,9 @@ add_action('after_setup_theme', 'true_load_theme_textdomain');
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
+
+//Enqueue the Dashicons script
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+wp_enqueue_style( 'dashicons' );
+}
