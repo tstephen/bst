@@ -7,8 +7,8 @@ function bst_enqueues() {
 	wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, '3.3.4', null);
 	wp_enqueue_style('bootstrap-css');
 
-  	wp_register_style('bst-css', get_template_directory_uri() . '/css/bst.css', false, null);
-	wp_enqueue_style('bst-css');
+  	wp_register_style('cbc-css', get_template_directory_uri() . '/css/cbc.css', false, null);
+	wp_enqueue_style('cbc-css');
 
 	/* Scripts */
 	

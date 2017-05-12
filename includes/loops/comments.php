@@ -32,9 +32,10 @@ if (have_comments()) : ?>
   else :
 	  if (comments_open()) :
   echo "<p class='alert alert-info'>" . __('Be the first to write a comment.', 'bst') . "</p>";
-		else :
+		/* TS 10 Dec 16 Comments are never enabled so let's hide this
+    else :
 			echo "<p class='alert alert-warning'>" . __('Comments are closed for this post.', 'bst') . "</p>";
-		endif;
+		endif;*/
 	endif;
 ?>
 

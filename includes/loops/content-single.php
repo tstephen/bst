@@ -25,7 +25,10 @@ The Single Posts Loop
             </p>
         </header>
         <section>
-            <?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive')); ?>
+            <figure>
+                <?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive')); ?>
+                <figcaption><?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?></figcaption>
+            </figure>
             <?php the_content()?>
             <?php wp_link_pages(); ?>
         </section>

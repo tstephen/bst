@@ -197,6 +197,19 @@ nav.navbar.navbar-default.navbar-static-bottom {
   margin-top: 0px;
 }
 /* Customisations for CBC below here */
+blockquote {
+  text-align: center;
+  border-right: 5px solid #eee;
+}
+figure {
+  margin: 5px 0px;
+}
+figcaption {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar {
     min-height: 40px;
@@ -230,13 +243,15 @@ footer text-3 {
 /**********************/
   WP-MEMBERS OVERIDES
 /**********************/
-@media screen and (min-width: 1024px) {
+
 .login,
 .logout {
   float:right;
 }
 .login {
-  margin-top: -40px;
+  float: right;
+  margin-top: -25px;
+  margin-right: 5px;
 }
 .logout {
   margin-top: -55px;
@@ -246,16 +261,18 @@ footer text-3 {
   text-align: center;
 }
 .logout a.logout {
-  height:48px !important;
+  height: 46px !important;
   margin-left: 2px;
-  margin-top: -4px;
-  padding: 10px !important;
-  width:48px !important;
+  margin-top: 0px;
+  padding: 5px !important;
+  width: 48px !important;
+  font-size: 40px;
 }
 .login a.login,
 .login a.register {
   min-width: 115px;
   padding: 11px 20px !important;
 }
+@media screen and (min-width: 1024px) {
 }
 
